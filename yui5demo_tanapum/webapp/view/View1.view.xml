@@ -17,6 +17,7 @@
 			    content="{/TimelineSet}">
 		        <cm:content>
 		            <cm:TimelineItem
+                    
 					    id="idTemplateItem"
 					    dateTime="{WorkStart}"
 					    title="{Company}"
