@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+
+    <Dialog id="idTimelineDtDialog"
+        title="Working Experience"
+        busyIndicatorDelay="0"> 
+
+        <f:SimpleForm id="idFormWorkExp">
+
+            <Label id="idLabelUsername" text="Username" labelFor="idTextUsername"/>
+            <Text id="idTextUsername" text="{/Timeline/Username}"/>
+
+            <Label id="idLabelCompany" text="Company" labelFor="idInputCompany"/>
+            <Input id="idInputCompany" value="{/Timeline/Company}" />
+
+            <Label id="idLabelWorkStart" text="Work Start" />
+            <DatePicker
+            id="idDatePickWorkStart"
+            value="{/Timeline/WorkStart}"
+            valueFormat="yyyyMM"
+            displayFormat="yyyy-MM"/>
+
+            <Label id="idLabelWorkEnd" text="Work End" />
+            <DatePicker
+            id="idDatePickWorkEnd"
+            value="{/Timeline/WorkEnd}"
+            valueFormat="yyyyMM"
+            displayFormat="yyyy-MM"/>
+
+            <Label id="idLabelWorkExp" text="Experience" />
+            <TextArea id="idTextAreaWorkExp" value="{/Timeline/WorkExp}"/>
+
+        </f:SimpleForm>
+
+        <buttons>       
+            <Button id="idBtCreate" icon="sap-icon://create" type="Emphasized" text="Create" press="onCreateTimelineDt"/>
+            <Button id="idBtClose" text="Close" press="onCloseTimelineDt"/>
+        </buttons>
+
+    </Dialog>
+
+</core:FragmentDefinition>
